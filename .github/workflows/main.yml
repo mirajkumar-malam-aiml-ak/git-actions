@@ -9,4 +9,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Print a message
-        run: echo "Hello world! This ran due to a new push to the repository."
+        run: |
+          echo "My secret value is: $SUPER_SECRET"
+        env:
+          SUPER_SECRET: ${{ secrets.SUPER_SECRET }}
