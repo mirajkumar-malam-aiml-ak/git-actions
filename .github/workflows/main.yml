@@ -1,0 +1,12 @@
+name: Say Hello, World!
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Print a message
+        run: echo "Hello world! This ran due to a new push to the repository."
